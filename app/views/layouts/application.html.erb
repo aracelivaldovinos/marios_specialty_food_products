@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsMariosSpecialtyFoodProducts</title>
+    <title>Marios Coffee Products</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,18 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-light bg-light" style="background-color: #e3f2fd;">
+      <a class="navbar-brand" href="http://localhost:3000">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/001/931/762/small/coffee-seeds-grains-isolated-icons-free-vector.jpg" width="60" height="60" alt="">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="http://localhost:3000/">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="http://localhost:3000/products">Products</a>
+          <a class="nav-item nav-link" href="#">Reviews</a>
+        </div>
+      </div>
+    </nav>
     <%= flash[:alert] %>
     <%= flash[:notice] %>
     <%= yield %>
