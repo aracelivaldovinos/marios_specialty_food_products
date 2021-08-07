@@ -30,3 +30,10 @@
     <% @brazil_location.each do |product| %>
       <%= link_to product.name, product_path(product) %>
     <% end %>
+
+    <h1>The Highest Reviewed Coffee Products</h1>
+    <% @most_reviews.each do |product| %>
+      <%= link_to product.name, product_path(product) %>
+    <% end %>
+
+    
