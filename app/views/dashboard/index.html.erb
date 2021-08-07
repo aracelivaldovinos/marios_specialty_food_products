@@ -1,13 +1,32 @@
-<h1 class="header">Welcome to Mario's Special Coffee Products Site</h1>
+<h1 class="header">Welcome to Marios Special Coffee Products Site</h1>
 
 <h1>Our Most Recent Coffee Products</h1>
-
-<% if @recent_products.any? %>
-  <ul>
+<div class = "row">
+  <div class= "col">
+  <% if @recent_products.any? %>
     <% @recent_products.each do |product| %>
+      <div class= "col-md">
       <li><%= link_to product.name, product_path(product) %></li>
+      </div>
     <% end %>
-  </ul>
 <% else %>
   <p>There are no recent_products yet.</p>
 <% end %>
+  </div>
+</div>
+
+<h1>Our Coffee Products Sold in Latin America</h1>
+
+    <% @panama_location.each do |product| %>
+      <%= link_to product.name, product_path(product) %>
+    <% end %>
+
+    <% @nicaragua_location.each do |product| %>
+      <%= link_to product.name, product_path(product) %>
+    <% end %>
+    <% @el_salvador_location.each do |product| %>
+      <%= link_to product.name, product_path(product) %>
+    <% end %>
+    <% @brazil_location.each do |product| %>
+      <%= link_to product.name, product_path(product) %>
+    <% end %>
