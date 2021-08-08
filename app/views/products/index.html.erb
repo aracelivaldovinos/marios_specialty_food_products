@@ -1,20 +1,37 @@
-<h1>Products</h1>
-# <div class = "row">
-  <% if @products.any? %>
+<div class="heading">
+<h1 class="header">Coffee Products</h1>
+<hr>
+<p class="links"><%= link_to "Home", dashboard_index_path %>
+<%= link_to "Createnewproduct", new_product_path %></p>
+<hr>
+<br>
+</div>
+
+  <div class="row">
     <% @products.each do |product| %>
-      # <div class="col">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Roasted_coffee_beans.jpg/1200px-Roasted_coffee_beans.jpg" width ="250" heigth="auto" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text"><%= link_to product.name, product_path(product) %></p>
-          </div>
+      <div class="col-md-2 mb-4">
+        <div class="card">
+          <img class="card-img-top" src="" width ="250" heigth="auto" alt="">
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to product.name, product_path(product) %></h5>
+              <p class="card-text">$ <%= product.cost %>
+              <br>
+              Country of Origin: <%= product.country_of_origin %>
+              </p>
+              <a href="#" class="btn btn-outline-primary btn-sm">
+              <%= link_to "See more", product_path(product) %>
+              </a>
+              <a href="#" class="btn btn-outline-secondary btn-sm">
+              <i class="far fa-heart"></i></a>
+            </div>
         </div>
-      # </div>
+      </div>
     <% end %>
-  <% else %>
-    <p>There are no products yet.</p>
-  <% end %>
-# </div>
+  </div>  
 
 
-<p><%= link_to "Create new product", new_product_path %></p>
+
+
+
+
+
