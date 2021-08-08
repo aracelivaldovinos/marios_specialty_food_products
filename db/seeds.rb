@@ -1,12 +1,12 @@
 require 'faker'
-# Product.destroy_all
-# Review.destroy_all
+Product.destroy_all
+Review.destroy_all
 
 50.times do
   Product.create!(
     name: Faker::Coffee.blend_name,
     cost: Faker::Number.decimal(l_digits: 2),
-    country_of_origin: Faker::Coffee.origin,
+    country_of_origin: Faker::Address.country,
     id: Faker::Number.unique.between(from: 1, to: 50)
 )
 end 

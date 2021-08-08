@@ -15,21 +15,12 @@
   </div>
 </div>
 
-<h1>Our Coffee Products Sold in Latin America</h1>
+<h1>Our Coffee Products Sold in U.S.</h1>
 
-    <% @panama_location.each do |product| %>
+    <% @us_location.each do |product| %>
       <%= link_to product.name, product_path(product) %>
     <% end %>
 
-    <% @nicaragua_location.each do |product| %>
-      <%= link_to product.name, product_path(product) %>
-    <% end %>
-    <% @el_salvador_location.each do |product| %>
-      <%= link_to product.name, product_path(product) %>
-    <% end %>
-    <% @brazil_location.each do |product| %>
-      <%= link_to product.name, product_path(product) %>
-    <% end %>
 
     <h1>The Highest Reviewed Coffee Products</h1>
     <% @most_reviews.each do |product| %>
