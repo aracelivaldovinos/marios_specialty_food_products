@@ -35,21 +35,21 @@ _Users should be able to add, update and delete new products. Don't worry about 
 * _Scopes_
 _Your site should use scopes to display the following information on the site:_
 
-* * _The product with the most reviews._
-* * _The three most recently added products._
-* * _All products made in the USA for buyers that want to buy local products._
+ * _The product with the most reviews._
+ * _The three most recently added products._
+ * _All products made in the USA for buyers that want to buy local products._
 
 * _Validations_
 _Your site should include validations for the following:_
 
-* * _All fields should be filled out, including rating._
-* * _Rating can only be an integer between 1 and 5._
-* * _The review's content_body must be between 50 and 250 characters._
+ * _All fields should be filled out, including rating._
+ * _Rating can only be an integer between 1 and 5._
+ * _The review's content_body must be between 50 and 250 characters._
 
 * _Callbacks_
 _Your site should include a callback for the following:_
 
-* * _All products are automatically titleized (first letter of each word capitalized) before they are saved to the database._
+ * _All products are automatically titleized (first letter of each word capitalized) before they are saved to the database._
 
 * _Seeding_
 _Your project should include seed data for 50 products and 250 reviews. Use Faker with a loop to seed the database._
@@ -78,7 +78,7 @@ _You'll be demoing this site to the CEO of Mario's Specialty Foods, so it should
 
 
 ## Known Bugs/Goals
-* __
+* _No known bugs_
 
 
 ## License
