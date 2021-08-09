@@ -7,8 +7,8 @@
 ## Technologies Used
 
 * _Ruby_
-* _Postgres_
-* _Ruby Gem: rspec, pry, sinatra, sinatra-contrib, capybara, pg_
+* _Rails_
+* _JavaScript\jQuery_
 * _HTML_
 * _Bootsrap\CSS_
 
