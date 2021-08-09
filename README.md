@@ -60,20 +60,25 @@ Overall Styling_
 _You'll be demoing this site to the CEO of Mario's Specialty Foods, so it should look presentable._
 
 ## Setup/Installation Requirements
-* _This project uses postgres, inorder to download use the following link: [Postgres Download](https://www.postgresql.org/download/)_
-* _To recreate the database enter the following command in the terminal/command line:_
-    * _createdb volunteer_tracker_
-    * _psql volunteer_tracker < database_backup.sql_
-    * _createdb -T volunteer_tracker volunteer_tracker_test_
+1. _Ruby and Rails Installations_
+* _This projects requires Ruby, follow the instructions [here](https://www.learnhowtoprogram.com/ruby-and-rails/getting-started-with-ruby/ruby-installation-and-setup) for installing Ruby._
+* _To install Rails enter `gem install rails -v 5.2.0` on the terminal._
+
+2. _Clone Repo and Install Bundler_
 * _Clone that repository down to your desktop._
 * _Navigate to the cloned folder and run `bundle install` in the terminal/command line to download dependencies_
+
+3. _Set up Database_
+* _To set up database run `rake db:setup` in the terminal. `rake db:setup` will run all the following (`rake db:create`,`rake db:schema`, `rake db:seed`) rake tasks at once _
+
+4. _Open Text Editor and Server_
 * _Open cloned folder in the editor of your choice_
 * _To run test use `rspec` on the root directory of the cloned project command line_
-* _To run app in browser use `ruby app.rb` on the root directory of the cloned project command line, then enter `http://localhost:4567` in the browser_
+* _To run app in browser use `rails s` or `rails server` on the root directory of the cloned project command line, then enter `http://localhost:3000` in the browser_
 
 
 ## Known Bugs/Goals
-* 
+* __
 
 
 ## License
