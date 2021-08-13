@@ -7,13 +7,13 @@ class ReviewsController < ApplicationController
   
   def new
     @product = Product.find(params[:product_id])
-    @review = Review.new  
+    @review = @product.reviews.new  
     render :new 
   end 
 
   def create
     @product = Product.find(params[:product_id])
-    @review = Review.new(review_params)
+    @review = @product.reviews.new(review_params)
     if @review.save
       flash[:notice] = "Hooray!!! Your review is added!"
       redirect_to product_reviews_path
@@ -35,7 +35,7 @@ class ReviewsController < ApplicationController
   end 
 
   def update
-    @product = Product.find(params[:product_id])
+    # @product = Product.find(params[:product_id])
     @review = Review.find(params[:id])
     if @review.update(review_params)
       flash[:notice] = "YES!!! The review has been updated!"
