@@ -1,6 +1,6 @@
 require 'faker'
 Product.destroy_all
-Review.destroy_all
+
 
 50.times do
   Product.create!(
@@ -11,6 +11,7 @@ Review.destroy_all
 )
 end 
 
+# Review.destroy_all
 250.times do 
   Review.create!(
     author: Faker::Name.name, 

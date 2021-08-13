@@ -1,9 +1,11 @@
 class ReviewsController < ApplicationController
-
-  # def index
-  #   @reviews = Review.all
-  #   render :index
-  # end
+  before_action except: [:new, :create, :show] do 
+    unless current_user.admin == true || current_user
+      flash[:alert] = 'You do not have access to this content.'
+      redirect_to product_path(Product.find(params[:product_id])) 
+      
+      end
+  end
   
   def new
     @product = Product.find(params[:product_id])
@@ -14,6 +16,7 @@ class ReviewsController < ApplicationController
   def create
     @product = Product.find(params[:product_id])
     @review = @product.reviews.new(review_params)
+   
     if @review.save
       flash[:notice] = "Hooray!!! Your review is added!"
       redirect_to product_path(@product)

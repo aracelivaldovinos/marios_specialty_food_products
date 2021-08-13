@@ -1,5 +1,6 @@
 class Review < ApplicationRecord
   belongs_to :product
+  belongs_to :user
   scope :highest_ratings, -> { where(rating: 5)}
   validates :author, presence: true
   validates :rating, presence: true
