@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  get 'dashboard/index'
+  devise_for :users
+  root to: 'dashboard#index'
+  
+  # get 'dashboard/index'
   
   resources :products do 
     resources :reviews
   end 
-  root to: 'dashboard#index'
 end
