@@ -1,9 +1,9 @@
 class ReviewsController < ApplicationController
 
-  def index
-    @reviews = Review.all
-    render :index
-  end
+  # def index
+  #   @reviews = Review.all
+  #   render :index
+  # end
   
   def new
     @product = Product.find(params[:product_id])
@@ -16,7 +16,7 @@ class ReviewsController < ApplicationController
     @review = @product.reviews.new(review_params)
     if @review.save
       flash[:notice] = "Hooray!!! Your review is added!"
-      redirect_to product_reviews_path
+      redirect_to product_path(@product)
     else
       flash[:alert] = "Dang this create method. Gotta do it again!"
       render :new
@@ -39,8 +39,9 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
     if @review.update(review_params)
       flash[:notice] = "YES!!! The review has been updated!"
-      redirect_to product_review_path
+      redirect_to product_path(@review.product)
     else
+      @product = Product.find(params[params[:product_id]])
       flash[:alert] = "Okay...Try it one more time." 
       render :edit
     end
@@ -50,7 +51,7 @@ class ReviewsController < ApplicationController
     @product = Product.find(params[:product_id])
     @review = Review.find(params[:id])
     @review.destroy
-    redirect_to product_reviews_path
+    redirect_to product_path(@review.product)
   end 
 
   private
