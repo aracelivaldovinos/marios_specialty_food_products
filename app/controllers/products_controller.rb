@@ -1,20 +1,10 @@
 class ProductsController < ApplicationController
-before_action :authenticate_user!
-before_action except: [:index, :show] do 
-  unless current_user.admin == true
-    flash[:alert] = 'You do not have access to this content.'
-    redirect_to products_path 
-    end
-end
-
-
   def index
     @products = Product.all
     render :index 
   end 
 
   def new
-    @user = current_user
     @product = Product.new
     render :new
   end 

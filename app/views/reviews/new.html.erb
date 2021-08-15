@@ -1,3 +1,4 @@
+<div class="errors">
 <% if @review.errors.any? %>
   <h3>Please fix these errors:</h3>
   <ul>
@@ -6,16 +7,30 @@
     <% end %>
   </ul>
 <% end %>
+</div>
 
+<div class="mx-auto text center" style="width:50%" id="form">
+    <div class="card p-4">
 
-<h1>Edit Review:</h1>
+<h1 class="header">Add Review:</h1>
 
 <%= form_for [@product, @review] do |f| %>
   <%= f.label :author %>
+  <br>
   <%= f.text_field :author %>
+  <br>
+  <br>
   <%= f.label :content_body %>
-  <%= f.text_area :content_body %>
+  <br>
+  <%= f.text_area :content_body, size: "70x5" %>
+  <br>
+  <br>
   <%= f.label :rating %>
-  <%= f.text_area :rating %>
+  <br>
+  <%= f.text_field :rating %>
+  <br>
+  <br>
   <p><%= f.submit %></p>
 <% end %>
+</div>
+</div>

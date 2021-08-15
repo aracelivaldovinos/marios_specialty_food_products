@@ -1,8 +1,7 @@
-@import "bootstrap-sprockets";
 @import "bootstrap";
 
 body{
-  background-image: url("https://images.unsplash.com/photo-1453614512568-c4024d13c247?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1189&q=80");
+  background-image: url("https://images.unsplash.com/photo-1507133750040-4a8f57021571?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -62,7 +61,8 @@ body{
   // margin-right: 15em;
   margin-top: 1em;
   margin-bottom: 1em;
-
+  color: #FBF7F5;
+  text-shadow: 0 2px black, 0 3px #777;
 }
 
 .header {
@@ -100,7 +100,32 @@ img{
   padding: 2em;
 }
 
+#form{
+  // margin-top: 10em;
+  
+}
 
+// .card{
+//   height: 500px;
+// }
+
+img{
+  border-radius: 50%;
+}
+
+.card-body{
+  font-size: 25px;
+}
+
+.card-title{
+  font-size: 25px;
+}
+
+.errors{
+  color: #FBF7F5;
+  text-shadow: 0 2px black, 0 3px #777;
+  font-size: 18px;
+}
 
 
 

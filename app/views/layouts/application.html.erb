@@ -10,21 +10,12 @@
   </head>
   
   <body>
+    <div class="errors">
     <%= flash[:alert] %>
     <%= flash[:notice] %>
-
-    
-
-    <% if current_user %>
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-    <%else%>
-      <%= link_to "Login", new_user_session_path%>
-    <%end%>
-
-    <div class="contiainer">
-    <%= yield %>
     </div>
     
+    <%= yield %>
   </body>
 
 </html>

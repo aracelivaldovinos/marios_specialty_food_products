@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
   scope :three_most_recent, -> { order(created_at: :desc).limit(3)}
   scope :us_location, -> { where(country_of_origin: "United States of America")}
   scope :most_reviews, -> {(
@@ -13,10 +13,6 @@ class Product < ApplicationRecord
   validates :name, presence: true
   validates :cost, presence: true
   validates :country_of_origin, presence: true 
-
-  
-  # Product.select("products.name, products.cost, count(reviews.id) as reviews_count").joins(:reviews).group("products.id").order("reviews_count DESC").limit(10)
-
 
   before_save(:titleize_product)
   private 

@@ -1,3 +1,4 @@
+<div class="errors">
 <% if @product.errors.any? %>
   <h3>Please fix these errors:</h3>
   <ul>
@@ -6,13 +7,17 @@
     <% end %>
   </ul>
 <% end %>
+</div>
+
+<div class="mx-auto text center" style="width:50%" id="form">
+    <div class="card p-4" id="form">
 
 <div class="heading">
 <h1 class="header">New product</h1>
-<br>
+
 </div>
 
-<div class="form">
+
 <%= form_for @product do |f| %>
   <div class = "f">
   <%= f.label :name %>
@@ -31,4 +36,8 @@
   <br>
   <%= f.submit  %>
 <% end %>
+<br>
+  <%= link_to "Go back to homepage", products_path %>
+
+</div>
 </div>
